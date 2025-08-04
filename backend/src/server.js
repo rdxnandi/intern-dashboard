@@ -13,7 +13,7 @@ dotenv.config({
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://intern-dashboard-0fij.onrender.com",
     credentials: true,
   })
 );
