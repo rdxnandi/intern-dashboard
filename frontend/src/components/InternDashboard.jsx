@@ -6,7 +6,7 @@ const InternDashboard = () => {
   const [intern, setIntern] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/intern")
+    fetch("https://intern-dashboard-backend-8idy.onrender.com/api/intern")
       .then((res) => res.json())
       .then((data) => setIntern(data))
       .catch((err) => console.log("Intern fetch error:", err));
