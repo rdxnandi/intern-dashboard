@@ -6,14 +6,14 @@ const LeaderboardPage = () => {
   const [leaderboard, setLeaderboard] = useState([]);
 
   useEffect(() => {
-    fetch("https://intern-dashboard-backend-8idy.onrender.com/api/intern")
+    fetch("http://localhost:3000/api/intern")
       .then((res) => res.json())
       .then((data) => setIntern(data))
       .catch((err) => console.log("Intern fetch error:", err));
   }, []);
 
   useEffect(() => {
-    fetch("https://intern-dashboard-backend-8idy.onrender.com/api/leaderboard")
+    fetch("http://localhost:3000/api/leaderboard")
       .then((res) => res.json())
       .then((data) => setLeaderboard(data))
       .catch((err) => console.log("Leaderboard fetch error:", err));
@@ -34,8 +34,8 @@ const LeaderboardPage = () => {
               key={index}
               className={`flex items-center justify-between p-4 rounded-lg ${
                 person.name === intern?.name
-                  ? "bg-blue-50 border-2 border-blue-200"
-                  : "bg-gray-50"
+                  ? "bg-green-100 border-2 border-green-200"
+                  : "bg-blue-50"
               }`}
             >
               <div className="flex items-center space-x-4">
