@@ -12,7 +12,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="h-screen flex items-center justify-center">
+    <div className="h-full flex items-center justify-center">
       <div className="bg-white shadow-md border border-gray-300 px-7 py-4 rounded-md w-[400px]">
         <div className="text-center space-y-3 mb-7">
           <h1 className="text-xl font-semibold tracking-wide">Welcome Back</h1>

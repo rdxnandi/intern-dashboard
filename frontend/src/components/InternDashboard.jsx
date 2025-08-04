@@ -1,4 +1,4 @@
-import { DollarSign, Users } from "lucide-react";
+import { IndianRupee, Users } from "lucide-react";
 import { rewards } from "../../constants";
 import { useEffect, useState } from "react";
 
@@ -15,7 +15,7 @@ const InternDashboard = () => {
   if (!intern) return <p className="p-10">Loading intern data....</p>;
 
   return (
-    <div className="h-full w-full space-y-6 p-10">
+    <div className="h-full w-full space-y-6 md:p-10 p-2">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="bg-white rounded-lg shadow-md p-6 border border-gray-300">
           <div className="flex items-center justify-between">
@@ -24,10 +24,10 @@ const InternDashboard = () => {
                 Total Donations
               </p>
               <p className="text-3xl font-bold text-green-600">
-                ${intern.totalDonations.toLocaleString()}
+                ₹{intern.totalDonations.toLocaleString()}
               </p>
             </div>
-            <DollarSign className="size-12 text-green-500" />
+            <IndianRupee className="size-12 text-green-500" />
           </div>
         </div>
         <div className="bg-white rounded-lg shadow-md p-6 border border-gray-300">

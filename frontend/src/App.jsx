@@ -1,14 +1,20 @@
-import Header from "./components/Sidebar/Sidebar";
+import Sidebar from "./components/Sidebar/Sidebar";
 import HomePage from "./pages/HomePage";
 import LeaderboardPage from "./pages/LeaderboardPage";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 const App = () => {
+  const location = useLocation();
+
+  const noSidebarRoutes = ["/login", "/signup"];
+
+  const showSidebar = !noSidebarRoutes.includes(location.pathname);
+
   return (
     <div className="min-h-screen flex">
-      <Header />
+      {showSidebar && <Sidebar />}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/leaderboard" element={<LeaderboardPage />} />

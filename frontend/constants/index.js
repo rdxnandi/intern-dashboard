@@ -31,7 +31,7 @@ const rewards = [
   {
     id: 1,
     title: "Top Fundraiser",
-    description: "Raised $10,000+",
+    description: "Raised ₹10,000+",
     earned: true,
     icon: Trophy,
   },

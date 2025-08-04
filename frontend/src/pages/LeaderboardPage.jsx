@@ -19,8 +19,10 @@ const LeaderboardPage = () => {
       .catch((err) => console.log("Leaderboard fetch error:", err));
   }, []);
 
+  if (!leaderboard) return <p className="p-10">Loading leaderboard data....</p>;
+
   return (
-    <div className="h-screen w-full bg-white shadow-md">
+    <div className="h-full w-full bg-white shadow-md">
       <div className="p-6 border-b border-gray-200">
         <h2 className="text-xl font-bold text-gray-800">Leaderboard</h2>
         <p className="text-gray-600">Top performers this month</p>
@@ -72,7 +74,7 @@ const LeaderboardPage = () => {
               </div>
               <div className="text-right">
                 <p className="font-bold text-green-600">
-                  ${person.donations.toLocaleString()}
+                  ₹{person.donations.toLocaleString()}
                 </p>
                 <p className="text-sm text-gray-500">donations raised</p>
               </div>

@@ -2,7 +2,7 @@ import Signup from "../components/Signup";
 
 const SignupPage = () => {
   return (
-    <div>
+    <div className="h-screen w-full">
       <Signup />
     </div>
   );
