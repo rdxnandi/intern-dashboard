@@ -6,14 +6,14 @@ const LeaderboardPage = () => {
   const [leaderboard, setLeaderboard] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/intern")
+    fetch("https://intern-dashboard-backend-8idy.onrender.com/api/intern")
       .then((res) => res.json())
       .then((data) => setIntern(data))
       .catch((err) => console.log("Intern fetch error:", err));
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/leaderboard")
+    fetch("https://intern-dashboard-backend-8idy.onrender.com/api/leaderboard")
       .then((res) => res.json())
       .then((data) => setLeaderboard(data))
       .catch((err) => console.log("Leaderboard fetch error:", err));
